@@ -36,8 +36,8 @@ config :phoenix, :stacktrace_depth, 20
 # Configure your database
 config :short_story, ShortStory.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
+  username: "clsimchick171",
+  password: "M8563632b",
   database: "short_story_dev",
   hostname: "localhost",
   pool_size: 10
