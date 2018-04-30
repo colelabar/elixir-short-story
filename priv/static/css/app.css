@@ -26,14 +26,6 @@ form.link, form.button {
 .header {
   border-bottom: 1px solid #e5e5e5;
 }
-.logo {
-  width: 519px;
-  height: 71px;
-  display: inline-block;
-  margin-bottom: 1em;
-  background-image: url("/images/phoenix.png");
-  background-size: 519px 71px;
-}
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
@@ -58,11 +50,6 @@ form.link, form.button {
   border-bottom: 1px solid #e5e5e5;
 }
 
-/* Supporting marketing content */
-.marketing {
-  margin: 35px 0;
-}
-
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   /* Remove the padding we set earlier */
@@ -80,6 +67,65 @@ form.link, form.button {
     border-bottom: 0;
   }
 }
+
 /* This file is for your main application css. */
+body {
+  background-color: #5188EE;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+}
+.logo {
+  width: 50%;
+  height: 100px;
+  display: inline-block;
+  margin-bottom: 1em;
+  background-image: url("/images/gol_logo.png");
+  background-size: 100% 100%;
+  border: 2px black solid;
+  background-repeat: no-repeat;
+}
+.nav {
+  display: inline-block;
+}
+.username {
+  height: 45px;
+  width: 90px;
+  text-align: center;
+  background-color: silver;
+  padding-top: 10px;
+  border: 2px solid black;
+  border-radius: 10%;
+}
+.logout {
+  height: 45px;
+  width: 90px;
+  text-align: center;
+  background-color: silver;
+  border: 2px solid black;
+  border-radius: 10%;
+}
+.postLink {
+  font-size: 28px;
+  text-align: center;
+  background-color: black;
+  border: 2px solid black;
+  border-radius: 40%;
+  width: 150px;
+  margin: 0 auto;
+}
+.newPost {
+  height: 45px;
+  width: 90px;
+  text-align: center;
+  background-color: silver;
+  padding-top: 10px;
+  border: 2px solid black;
+  border-radius: 10%;
+}
+
 
 /*# sourceMappingURL=app.css.map*/

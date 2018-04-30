@@ -7,26 +7,26 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Hello ShortStory!</title>
+    <title>Lore_Hive</title>
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
   </head>
 
   <body>
     <div class="container">
-      <header class="header">
+      <header class="header flex">
+        <span class="logo"></span>
         <nav role="navigation">
-          <ul class="nav nav-pills pull-right">
+          <ul class="nav nav-pills">
             <%= if @current_user do %>
-              <li><%= @current_user.username %></li>
-              <li><%= link "Log out", to: session_path(@conn, :delete, @current_user),
+              <li class="username"><%= @current_user.username %></li>
+              <li class="logout"><%= link "Log out", to: session_path(@conn, :delete, @current_user),
               method: "delete" %></li>
             <% else %>
-              <li><%= link "Register", to: user_path(@conn, :new) %></li>
-              <li><%= link "Log in", to: session_path(@conn, :new) %></li>
+              <li class="logout"><%= link "Register", to: user_path(@conn, :new) %></li>
+              <li class="logout"><%= link "Log in", to: session_path(@conn, :new) %></li>
             <% end %>
           </ul>
         </nav>
-        <span class="logo"></span>
       </header>
 
       <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>

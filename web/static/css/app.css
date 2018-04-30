@@ -1,1 +1,58 @@
 /* This file is for your main application css. */
+body {
+  background-color: #5188EE;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+}
+.logo {
+  width: 50%;
+  height: 100px;
+  display: inline-block;
+  margin-bottom: 1em;
+  background-image: url("/images/gol_logo.png");
+  background-size: 100% 100%;
+  border: 2px black solid;
+  background-repeat: no-repeat;
+}
+.nav {
+  display: inline-block;
+}
+.username {
+  height: 45px;
+  width: 90px;
+  text-align: center;
+  background-color: silver;
+  padding-top: 10px;
+  border: 2px solid black;
+  border-radius: 10%;
+}
+.logout {
+  height: 45px;
+  width: 90px;
+  text-align: center;
+  background-color: silver;
+  border: 2px solid black;
+  border-radius: 10%;
+}
+.postLink {
+  font-size: 28px;
+  text-align: center;
+  background-color: black;
+  border: 2px solid black;
+  border-radius: 40%;
+  width: 150px;
+  margin: 0 auto;
+}
+.newPost {
+  height: 45px;
+  width: 90px;
+  text-align: center;
+  background-color: silver;
+  padding-top: 10px;
+  border: 2px solid black;
+  border-radius: 10%;
+}

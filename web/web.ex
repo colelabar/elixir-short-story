@@ -36,6 +36,7 @@ defmodule ShortStory.Web do
 
       import ShortStory.Router.Helpers
       import ShortStory.Gettext
+      import ShortStory.Auth, only: [authenticate_user: 2]
     end
   end
 
@@ -58,6 +59,8 @@ defmodule ShortStory.Web do
   def router do
     quote do
       use Phoenix.Router
+
+      import ShortStory.Auth, only: [authenticate_user: 2]
     end
   end
 
