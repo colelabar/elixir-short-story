@@ -22,5 +22,5 @@
 <div class="newPost"><%= link "Edit", to: post_path(@conn, :edit, @post) %>
 </div>
 <div class="newPost">
-<%= link "Back", to: post_path(@conn, :index) %>
+  <%= link "Back", to: post_path(@conn, :index) %>
 </div>

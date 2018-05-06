@@ -10,6 +10,5 @@ defmodule ShortStory.Repo.Migrations.CreatePost do
       timestamps()
     end
     create index(:posts, [:user_id])
-
   end
 end
