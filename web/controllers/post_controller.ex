@@ -78,6 +78,6 @@ defmodule ShortStory.PostController do
   end
 
   defp user_posts(user) do
-     assoc(user, :posts)
+    assoc(user, :posts)
   end
 end
