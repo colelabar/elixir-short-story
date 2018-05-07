@@ -20,4 +20,5 @@
     <%= error_tag f, :password %>
   </div>
   <%= submit "Create User", class: "btn btn-primary" %>
+  <%= link "Back", class: "logout", to: post_path(@conn, :index) %>
 <% end %>

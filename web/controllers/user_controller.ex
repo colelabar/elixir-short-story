@@ -27,7 +27,7 @@ defmodule ShortStory.UserController do
         conn
         |> ShortStory.Auth.login(user)
         |> put_flash(:info, "New user \"#{user.username}\" created!")
-        |> redirect(to: user_path(conn, :index))
+        |> redirect(to: post_path(conn, :index))
       {:error, changeset} ->
         render(conn, "new.html", changeset: changeset)
     end
