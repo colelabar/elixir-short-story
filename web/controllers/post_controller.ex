@@ -10,8 +10,8 @@ defmodule ShortStory.PostController do
           [conn, conn.params, conn.assigns.current_user])
   end
 
-  def index(conn, _params, user) do
-    posts = Repo.all(user_posts(user))
+  def index(conn, _params, _) do
+    posts = Repo.all(ShortStory.Post)
     render(conn, "index.html", posts: posts)
   end
 
@@ -41,7 +41,7 @@ defmodule ShortStory.PostController do
   end
 
   def show(conn, %{"id" => id}, user) do
-    post = Repo.get!(user_posts(user), id)
+    post = Repo.get!(ShortStory.Post, id)
     render(conn, "show.html", post: post)
   end
 
