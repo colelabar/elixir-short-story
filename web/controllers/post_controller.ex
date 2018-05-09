@@ -40,16 +40,26 @@ defmodule ShortStory.PostController do
     end
   end
 
-  def show(conn, %{"id" => id}, user) do
+  def show(conn, %{"id" => id}, _) do
     post = Repo.get!(ShortStory.Post, id)
     render(conn, "show.html", post: post)
   end
 
   def edit(conn, %{"id" => id}, user) do
-    post = Repo.get!(user_posts(user), id)
+    post = Repo.get(user_posts(user), id)
     changeset = Post.changeset(post)
     render(conn, "edit.html", post: post, changeset: changeset)
   end
+  # This is where I'd put error handling...IF I HAD SOME
+  # def edit(conn, %{"id" => id}, user) do
+  #   post = Repo.get(user_posts(user), id)
+  #   if {Post.user_id === conn.assigns.current_user.id} do
+  #     changeset = Post.changeset(post)
+  #     render(conn, "edit.html", post: post, changeset: changeset)
+  #   else
+  #     render(conn, "show.html", post: post)
+  #   end
+  # end
 
   def update(conn, %{"id" => id, "post" => post_params}, user) do
     post = Repo.get!(user_posts(user), id)
