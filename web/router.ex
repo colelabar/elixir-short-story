@@ -26,6 +26,7 @@ defmodule ShortStory.Router do
     pipe_through [:browser, :authenticate_user]
 
     resources "/posts", PostController
+    resources "/comments", CommentController
   end
 
   # Other scopes may use custom stacks.

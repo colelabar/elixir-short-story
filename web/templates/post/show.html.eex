@@ -17,9 +17,13 @@
     <%= @post.content %>
   </li>
 
+
 </ul>
 
 <div class="newPost"><%= link "Edit", to: post_path(@conn, :edit, @post) %>
+</div>
+<div class="newPost">
+  <%= link "Comment", to: comment_path(@conn, :new) %>
 </div>
 <div class="newPost">
   <%= link "Back", to: post_path(@conn, :index) %>

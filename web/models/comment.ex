@@ -1,11 +1,10 @@
-defmodule ShortStory.Post do
+defmodule ShortStory.Comment do
   use ShortStory.Web, :model
 
-  schema "posts" do
-    field :title, :string
+  schema "comments" do
     field :content, :string
     belongs_to :user, ShortStory.User
-    has_many :comments, ShortStory.Comment
+    belongs_to :post, ShortStory.Post
 
     timestamps()
   end
@@ -15,7 +14,7 @@ defmodule ShortStory.Post do
   """
   def changeset(struct, params \\ %{}) do
     struct
-    |> cast(params, [:title, :content])
-    |> validate_required([:title, :content])
+    |> cast(params, [:content])
+    |> validate_required([:content])
   end
 end

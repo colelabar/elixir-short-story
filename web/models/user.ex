@@ -7,6 +7,7 @@ defmodule ShortStory.User do
     field :password, :string, virtual: true
     field :password_hash, :string
     has_many :posts, ShortStory.Post
+    has_many :comments, ShortStory.Comment
 
     timestamps()
   end
