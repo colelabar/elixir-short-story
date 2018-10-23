@@ -6,5 +6,5 @@
       <td><b><%= first_name(user) %></b> (<%= user.id %>)</td>
       <td><%= link "View", to: user_path(@conn, :show, user.id) %></td>
     </tr>
-    <% end %> 
+  <% end %>
 </table>
