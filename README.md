@@ -1,6 +1,6 @@
 # ShortStoryApp
 
-This is a short-story app built using Elixir and Phoenix, in conjunction with the Programming Phoenix book. This simple app allows users to write posts in a continuous-feed style, in that any new posts show up directly on the home feed. It follows the basic CRUD themes.
+This is a short-story app built using Elixir and Phoenix, in conjunction with the Programming Phoenix book. This simple app allows users to write posts in a continuous-feed style, in that any new posts show up directly on the home feed. It follows the basic CRUD themes, allowing users to create posts, read all posts, as well as update and delete their own posts.
 
 To start your Phoenix app:
 
